@@ -8,11 +8,24 @@ using IdentityServer4.Stores;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace IdentityServer4.LiteDB.Tests
+namespace IdentityServer4.LiteDB.Tests.Stores
 {
+
     [TestClass]
     public class ClientStoreUnitTests
     {
+        public ClientStoreUnitTests()
+        {
+            HostContainer = new HostContainer();
+        }
+
+        public HostContainer HostContainer { get; }
+
+        public ServiceProvider ServiceProvider
+        {
+            get { return HostContainer.ServiceProvider; }
+        }
+
         public Entities.Client GenerateEntityClient()
         {
             var client = new Entities.Client()
@@ -49,14 +62,12 @@ namespace IdentityServer4.LiteDB.Tests
         [TestMethod]
         public async Task Add_Client_Find_Client_Success()
         {
-            var hostContainer = new HostContainer();
-
-            var configurationDbContext = hostContainer.ServiceProvider.GetService<IConfigurationDbContext>();
+            var configurationDbContext = ServiceProvider.GetService<IConfigurationDbContext>();
 
             var entityClient = GenerateEntityClient();
             configurationDbContext.AddClient(entityClient);
 
-            var clientStore = hostContainer.ServiceProvider.GetService<IClientStore>();
+            var clientStore = ServiceProvider.GetService<IClientStore>();
             var idsrvClient = await clientStore.FindClientByIdAsync(entityClient.ClientId);
 
             Assert.IsNotNull(idsrvClient);
@@ -66,11 +77,9 @@ namespace IdentityServer4.LiteDB.Tests
         [TestMethod]
         public async Task Find_Client_Fail()
         {
-            var hostContainer = new HostContainer();
+            var configurationDbContext = ServiceProvider.GetService<IConfigurationDbContext>();
 
-            var configurationDbContext = hostContainer.ServiceProvider.GetService<IConfigurationDbContext>();
-
-            var clientStore = hostContainer.ServiceProvider.GetService<IClientStore>();
+            var clientStore = ServiceProvider.GetService<IClientStore>();
             var idsrvClient = await clientStore.FindClientByIdAsync(Guid.NewGuid().ToString());
 
             Assert.IsNull(idsrvClient);

@@ -13,21 +13,36 @@ namespace IdentityServer4.LiteDB.Tests
     public class HostContainer
     {
         private TempFile TempFile { get; }
+
         public HostContainer()
         {
             TempFile = new TempFile();
-
-            var settings = A.Fake<IOptions<LiteDBConfiguration>>();
-            A.CallTo(() => settings.Value).Returns(new LiteDBConfiguration()
+            var liteDbConfiguration = new LiteDBConfiguration()
             {
                 ConnectionString = TempFile.Filename
-            });
-            ServiceProvider = new ServiceCollection()
+            };
+            var settings = A.Fake<IOptions<LiteDBConfiguration>>();
+            A.CallTo(() => settings.Value).Returns(liteDbConfiguration);
+
+            var serviceCollection = new ServiceCollection()
                 .AddLogging()
                 .AddTransient<IConfigurationDbContext, ConfigurationDbContext>()
-                .AddSingleton(settings)
-                .AddTransient<IClientStore, ClientStore>()
-                .BuildServiceProvider();
+                .AddSingleton(settings);
+
+            var identityServerBuilder = serviceCollection.AddIdentityServer();
+           
+
+            identityServerBuilder.AddConfigurationStore(setupAction =>
+            {
+                setupAction.ConnectionString = liteDbConfiguration.ConnectionString;
+            });
+
+            identityServerBuilder.AddOperationalStore(setupAction =>
+            {
+                setupAction.ConnectionString = liteDbConfiguration.ConnectionString;
+            });
+
+            ServiceProvider = serviceCollection.BuildServiceProvider();
         }
 
         public ServiceProvider ServiceProvider { get; }
