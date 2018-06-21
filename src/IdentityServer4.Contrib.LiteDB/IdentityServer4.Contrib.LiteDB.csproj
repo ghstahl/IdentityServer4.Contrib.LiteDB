@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>IdentityServer4.LiteDB</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="IdentityServer4" Version="2.2.0" />
+    <PackageReference Include="LiteDB" Version="4.1.4" />
+  </ItemGroup>
+
+</Project>
