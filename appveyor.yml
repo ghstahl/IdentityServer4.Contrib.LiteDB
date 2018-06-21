@@ -34,7 +34,7 @@ build:
   project: src/IdentityServer4.Contrib.LiteDB.sln
 
 test:
-dotnet test --test-adapter-path:. --logger:Appveyor
+- cmd:dotnet test --test-adapter-path:. --logger:Appveyor
 
 after_test:
   
