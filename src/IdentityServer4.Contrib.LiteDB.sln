@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{18620D32-A85
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{47F5CDAC-1CAA-47D2-897A-BBAA40EA2595}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{5A6F0F2B-9FB0-4BC4-A2E9-0D00978D2627}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PagesWebApp", "PagesWebApp\PagesWebApp.csproj", "{C95CEAE7-1C33-4E26-8BAA-1385DB9F8F2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,10 @@ Global
 		{2B81B99F-571E-4911-94D0-EDDA07E869D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B81B99F-571E-4911-94D0-EDDA07E869D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B81B99F-571E-4911-94D0-EDDA07E869D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C95CEAE7-1C33-4E26-8BAA-1385DB9F8F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C95CEAE7-1C33-4E26-8BAA-1385DB9F8F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C95CEAE7-1C33-4E26-8BAA-1385DB9F8F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C95CEAE7-1C33-4E26-8BAA-1385DB9F8F2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +40,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{971EE958-EA64-4596-B087-3D5B9FE7635D} = {18620D32-A85C-40DA-951E-BF2922409B35}
 		{2B81B99F-571E-4911-94D0-EDDA07E869D8} = {47F5CDAC-1CAA-47D2-897A-BBAA40EA2595}
+		{5A6F0F2B-9FB0-4BC4-A2E9-0D00978D2627} = {18620D32-A85C-40DA-951E-BF2922409B35}
+		{C95CEAE7-1C33-4E26-8BAA-1385DB9F8F2D} = {5A6F0F2B-9FB0-4BC4-A2E9-0D00978D2627}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13506A25-22A2-4D24-89D0-0AF54DF985E1}

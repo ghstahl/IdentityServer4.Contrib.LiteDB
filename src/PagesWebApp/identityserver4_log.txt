@@ -1,0 +1,401 @@
+2018-06-21 11:03:10.699 -07:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2018-06-21 11:03:10.743 -07:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-06-21 11:03:10.746 -07:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-06-21 11:03:10.746 -07:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-06-21 11:03:10.746 -07:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-06-21 11:03:10.746 -07:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-06-21 11:11:33.065 -07:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2018-06-21 11:11:33.107 -07:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-06-21 11:11:33.110 -07:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-06-21 11:11:33.110 -07:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-06-21 11:11:33.110 -07:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-06-21 11:11:33.110 -07:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-06-21 11:20:40.900 -07:00 [DBG] Using Identity.Application as default scheme for authentication
+2018-06-21 11:20:40.931 -07:00 [DBG] Using Identity.External as default scheme for sign-in
+2018-06-21 11:20:40.932 -07:00 [DBG] Using Identity.External as default scheme for sign-out
+2018-06-21 11:20:40.932 -07:00 [DBG] Using Identity.Application as default scheme for challenge
+2018-06-21 11:20:40.932 -07:00 [DBG] Using Identity.Application as default scheme for forbid
+2018-06-21 11:20:46.967 -07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2018-06-21 11:20:51.979 -07:00 [DBG] Augmenting SignInContext
+2018-06-21 11:20:51.981 -07:00 [DBG] Adding idp claim with value: local
+2018-06-21 11:20:51.981 -07:00 [DBG] Adding amr claim with value: pwd
+2018-06-21 11:20:51.981 -07:00 [DBG] Adding auth_time claim with value: 1529605251
+2018-06-21 11:20:51.992 -07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2018-06-21 11:20:51.995 -07:00 [INF] User logged in.
+2018-06-21 11:20:53.805 -07:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2018-06-21 11:20:53.806 -07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2018-06-21 11:20:53.807 -07:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2018-06-21 11:23:57.906 -07:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2018-06-21 11:23:57.911 -07:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2018-06-21 11:23:57.911 -07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2018-06-21 11:23:57.915 -07:00 [DBG] Start discovery request
+2018-06-21 11:23:58.069 -07:00 [DBG] Found ["openid","profile","api1"] as all scopes in database
+2018-06-21 11:23:58.279 -07:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2018-06-21 11:23:58.280 -07:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2018-06-21 11:23:58.280 -07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2018-06-21 11:23:58.283 -07:00 [DBG] Start key discovery request
+2018-06-21 11:23:58.388 -07:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2018-06-21 11:23:58.393 -07:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2018-06-21 11:23:58.393 -07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2018-06-21 11:23:58.398 -07:00 [DBG] Start authorize request
+2018-06-21 11:23:58.406 -07:00 [DBG] No user present in authorize request
+2018-06-21 11:23:58.413 -07:00 [DBG] Start authorize request protocol validation
+2018-06-21 11:23:58.459 -07:00 [DBG] PagesWebAppClient.NoUserDatabase found in database: true
+2018-06-21 11:23:58.487 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:23:58.492 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:23:58.499 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:23:58.500 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:23:58.507 -07:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-06-21 11:23:58.519 -07:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "PagesWebAppClient.NoUserDatabase",
+  "ClientName": "PagesWebAppClient.NoUserDatabase Client",
+  "RedirectUri": "https://localhost:44308/signin-oidc-pages-webapp-client",
+  "AllowedRedirectUris": [
+    "https://localhost:44308/signin-oidc-pages-webapp-client"
+  ],
+  "SubjectId": "anonymous",
+  "ResponseType": "id_token",
+  "ResponseMode": "form_post",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile",
+  "State": "CfDJ8AQSYsh6ho1FqUlbp_GHp0Qyr_HYsCz4ZMzjVuujSLH8BFxOmArwdK0y2KqqqiFfKjTFE3Qt5k-bpCa9VNeRKHDCAU88Ou_XqKWoeAhINHvNMp2QQRNh7J4E1UkO01xklwST9ylj5BNAUJlvz49OQPCnGsjmCrtUf6ZE8jRFIzMTv9a9fc1Q1LdnX4pJrLIsCj_4oasfz2oplzlfolHsvIhW4tCtzZ8Lzh04DVLcXvXIvvhHHQyc9tnzdLvKqvo2tvZGD4Fr-Qwk7MaIS_qFKBAHHK886sO72NUBf6uxxhqt5_ED_BRcSa13HRAKl-B4Y10kHD5IyE2mu9yMPVcNfqCqUOLGJbEEj0EH3zQEk1_NM5ss9ZtgDaWWyTwL-J0dqdTctnr_cfrPLizAl4LyogGo3LOrtBRexPCBfvrCM0OxUIOQDYkTwqmlhFy77YGmCg",
+  "Nonce": "636652022383412777.MGNkMDE0M2EtMGYzZC00ZWZlLTgxODgtZmFiMjNlODZmNDhjNWJiNDNkYzUtNGQ2Yi00ODMwLWE4MzEtYzFhY2ZhOTZkMTQ5",
+  "AuthenticationContextReferenceClasses": [
+    "v1=google"
+  ],
+  "Raw": {
+    "client_id": "PagesWebAppClient.NoUserDatabase",
+    "redirect_uri": "https://localhost:44308/signin-oidc-pages-webapp-client",
+    "response_type": "id_token",
+    "scope": "openid profile",
+    "response_mode": "form_post",
+    "nonce": "636652022383412777.MGNkMDE0M2EtMGYzZC00ZWZlLTgxODgtZmFiMjNlODZmNDhjNWJiNDNkYzUtNGQ2Yi00ODMwLWE4MzEtYzFhY2ZhOTZkMTQ5",
+    "acr_values": "v1=google",
+    "state": "CfDJ8AQSYsh6ho1FqUlbp_GHp0Qyr_HYsCz4ZMzjVuujSLH8BFxOmArwdK0y2KqqqiFfKjTFE3Qt5k-bpCa9VNeRKHDCAU88Ou_XqKWoeAhINHvNMp2QQRNh7J4E1UkO01xklwST9ylj5BNAUJlvz49OQPCnGsjmCrtUf6ZE8jRFIzMTv9a9fc1Q1LdnX4pJrLIsCj_4oasfz2oplzlfolHsvIhW4tCtzZ8Lzh04DVLcXvXIvvhHHQyc9tnzdLvKqvo2tvZGD4Fr-Qwk7MaIS_qFKBAHHK886sO72NUBf6uxxhqt5_ED_BRcSa13HRAKl-B4Y10kHD5IyE2mu9yMPVcNfqCqUOLGJbEEj0EH3zQEk1_NM5ss9ZtgDaWWyTwL-J0dqdTctnr_cfrPLizAl4LyogGo3LOrtBRexPCBfvrCM0OxUIOQDYkTwqmlhFy77YGmCg",
+    "x-client-SKU": "ID_NETSTANDARD1_4",
+    "x-client-ver": "5.2.0.0"
+  }
+}
+2018-06-21 11:23:58.531 -07:00 [INF] Showing login: User is not authenticated
+2018-06-21 11:23:58.543 -07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2018-06-21 11:24:08.390 -07:00 [DBG] Augmenting SignInContext
+2018-06-21 11:24:08.390 -07:00 [DBG] Adding idp claim with value: local
+2018-06-21 11:24:08.390 -07:00 [DBG] Adding amr claim with value: pwd
+2018-06-21 11:24:08.390 -07:00 [DBG] Adding auth_time claim with value: 1529605448
+2018-06-21 11:24:08.391 -07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2018-06-21 11:24:08.391 -07:00 [INF] User logged in.
+2018-06-21 11:24:08.399 -07:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2018-06-21 11:24:08.400 -07:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2018-06-21 11:24:08.400 -07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2018-06-21 11:24:08.406 -07:00 [DBG] Start authorize callback request
+2018-06-21 11:24:08.410 -07:00 [DBG] User in authorize request: 9e4613a3-b838-4c38-8bb2-2894f9bdb7bf
+2018-06-21 11:24:08.410 -07:00 [DBG] Start authorize request protocol validation
+2018-06-21 11:24:08.412 -07:00 [DBG] PagesWebAppClient.NoUserDatabase found in database: true
+2018-06-21 11:24:08.413 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:24:08.415 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:24:08.416 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:24:08.418 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:24:08.418 -07:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-06-21 11:24:08.418 -07:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "PagesWebAppClient.NoUserDatabase",
+  "ClientName": "PagesWebAppClient.NoUserDatabase Client",
+  "RedirectUri": "https://localhost:44308/signin-oidc-pages-webapp-client",
+  "AllowedRedirectUris": [
+    "https://localhost:44308/signin-oidc-pages-webapp-client"
+  ],
+  "SubjectId": "9e4613a3-b838-4c38-8bb2-2894f9bdb7bf",
+  "ResponseType": "id_token",
+  "ResponseMode": "form_post",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile",
+  "State": "CfDJ8AQSYsh6ho1FqUlbp_GHp0Qyr_HYsCz4ZMzjVuujSLH8BFxOmArwdK0y2KqqqiFfKjTFE3Qt5k-bpCa9VNeRKHDCAU88Ou_XqKWoeAhINHvNMp2QQRNh7J4E1UkO01xklwST9ylj5BNAUJlvz49OQPCnGsjmCrtUf6ZE8jRFIzMTv9a9fc1Q1LdnX4pJrLIsCj_4oasfz2oplzlfolHsvIhW4tCtzZ8Lzh04DVLcXvXIvvhHHQyc9tnzdLvKqvo2tvZGD4Fr-Qwk7MaIS_qFKBAHHK886sO72NUBf6uxxhqt5_ED_BRcSa13HRAKl-B4Y10kHD5IyE2mu9yMPVcNfqCqUOLGJbEEj0EH3zQEk1_NM5ss9ZtgDaWWyTwL-J0dqdTctnr_cfrPLizAl4LyogGo3LOrtBRexPCBfvrCM0OxUIOQDYkTwqmlhFy77YGmCg",
+  "Nonce": "636652022383412777.MGNkMDE0M2EtMGYzZC00ZWZlLTgxODgtZmFiMjNlODZmNDhjNWJiNDNkYzUtNGQ2Yi00ODMwLWE4MzEtYzFhY2ZhOTZkMTQ5",
+  "AuthenticationContextReferenceClasses": [
+    "v1=google"
+  ],
+  "SessionId": "757f6a09ac0525ab557a6f082356b14a",
+  "Raw": {
+    "client_id": "PagesWebAppClient.NoUserDatabase",
+    "redirect_uri": "https://localhost:44308/signin-oidc-pages-webapp-client",
+    "response_type": "id_token",
+    "scope": "openid profile",
+    "response_mode": "form_post",
+    "nonce": "636652022383412777.MGNkMDE0M2EtMGYzZC00ZWZlLTgxODgtZmFiMjNlODZmNDhjNWJiNDNkYzUtNGQ2Yi00ODMwLWE4MzEtYzFhY2ZhOTZkMTQ5",
+    "acr_values": "v1=google",
+    "state": "CfDJ8AQSYsh6ho1FqUlbp_GHp0Qyr_HYsCz4ZMzjVuujSLH8BFxOmArwdK0y2KqqqiFfKjTFE3Qt5k-bpCa9VNeRKHDCAU88Ou_XqKWoeAhINHvNMp2QQRNh7J4E1UkO01xklwST9ylj5BNAUJlvz49OQPCnGsjmCrtUf6ZE8jRFIzMTv9a9fc1Q1LdnX4pJrLIsCj_4oasfz2oplzlfolHsvIhW4tCtzZ8Lzh04DVLcXvXIvvhHHQyc9tnzdLvKqvo2tvZGD4Fr-Qwk7MaIS_qFKBAHHK886sO72NUBf6uxxhqt5_ED_BRcSa13HRAKl-B4Y10kHD5IyE2mu9yMPVcNfqCqUOLGJbEEj0EH3zQEk1_NM5ss9ZtgDaWWyTwL-J0dqdTctnr_cfrPLizAl4LyogGo3LOrtBRexPCBfvrCM0OxUIOQDYkTwqmlhFy77YGmCg",
+    "x-client-SKU": "ID_NETSTANDARD1_4",
+    "x-client-ver": "5.2.0.0"
+  }
+}
+2018-06-21 11:24:08.501 -07:00 [DBG] /pcccd+0dblGlzhaFmHMrKcCAlxdHmdXDvNtZuPLRwc= found in database: false
+2018-06-21 11:24:08.501 -07:00 [DBG] user_consent grant with value: PagesWebAppClient.NoUserDatabase|9e4613a3-b838-4c38-8bb2-2894f9bdb7bf not found in store.
+2018-06-21 11:24:08.501 -07:00 [DBG] Found no prior consent from consent store, consent is required
+2018-06-21 11:24:08.501 -07:00 [INF] Showing consent: User has not yet consented
+2018-06-21 11:24:08.589 -07:00 [DBG] Start authorize request protocol validation
+2018-06-21 11:24:08.591 -07:00 [DBG] PagesWebAppClient.NoUserDatabase found in database: true
+2018-06-21 11:24:08.592 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:24:08.594 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:24:08.595 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:24:08.596 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:24:08.596 -07:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-06-21 11:24:08.600 -07:00 [DBG] PagesWebAppClient.NoUserDatabase found in database: true
+2018-06-21 11:24:08.602 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:24:08.603 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:24:10.207 -07:00 [DBG] Start authorize request protocol validation
+2018-06-21 11:24:10.210 -07:00 [DBG] PagesWebAppClient.NoUserDatabase found in database: true
+2018-06-21 11:24:10.212 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:24:10.214 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:24:10.216 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:24:10.218 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:24:10.219 -07:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-06-21 11:24:10.248 -07:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2018-06-21 11:24:10.249 -07:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2018-06-21 11:24:10.249 -07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2018-06-21 11:24:10.249 -07:00 [DBG] Start authorize callback request
+2018-06-21 11:24:10.254 -07:00 [DBG] User in authorize request: 9e4613a3-b838-4c38-8bb2-2894f9bdb7bf
+2018-06-21 11:24:10.254 -07:00 [DBG] Start authorize request protocol validation
+2018-06-21 11:24:10.257 -07:00 [DBG] PagesWebAppClient.NoUserDatabase found in database: true
+2018-06-21 11:24:10.259 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:24:10.261 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:24:10.263 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:24:10.265 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:24:10.265 -07:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-06-21 11:24:10.266 -07:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "PagesWebAppClient.NoUserDatabase",
+  "ClientName": "PagesWebAppClient.NoUserDatabase Client",
+  "RedirectUri": "https://localhost:44308/signin-oidc-pages-webapp-client",
+  "AllowedRedirectUris": [
+    "https://localhost:44308/signin-oidc-pages-webapp-client"
+  ],
+  "SubjectId": "9e4613a3-b838-4c38-8bb2-2894f9bdb7bf",
+  "ResponseType": "id_token",
+  "ResponseMode": "form_post",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile",
+  "State": "CfDJ8AQSYsh6ho1FqUlbp_GHp0Qyr_HYsCz4ZMzjVuujSLH8BFxOmArwdK0y2KqqqiFfKjTFE3Qt5k-bpCa9VNeRKHDCAU88Ou_XqKWoeAhINHvNMp2QQRNh7J4E1UkO01xklwST9ylj5BNAUJlvz49OQPCnGsjmCrtUf6ZE8jRFIzMTv9a9fc1Q1LdnX4pJrLIsCj_4oasfz2oplzlfolHsvIhW4tCtzZ8Lzh04DVLcXvXIvvhHHQyc9tnzdLvKqvo2tvZGD4Fr-Qwk7MaIS_qFKBAHHK886sO72NUBf6uxxhqt5_ED_BRcSa13HRAKl-B4Y10kHD5IyE2mu9yMPVcNfqCqUOLGJbEEj0EH3zQEk1_NM5ss9ZtgDaWWyTwL-J0dqdTctnr_cfrPLizAl4LyogGo3LOrtBRexPCBfvrCM0OxUIOQDYkTwqmlhFy77YGmCg",
+  "Nonce": "636652022383412777.MGNkMDE0M2EtMGYzZC00ZWZlLTgxODgtZmFiMjNlODZmNDhjNWJiNDNkYzUtNGQ2Yi00ODMwLWE4MzEtYzFhY2ZhOTZkMTQ5",
+  "AuthenticationContextReferenceClasses": [
+    "v1=google"
+  ],
+  "SessionId": "757f6a09ac0525ab557a6f082356b14a",
+  "Raw": {
+    "client_id": "PagesWebAppClient.NoUserDatabase",
+    "redirect_uri": "https://localhost:44308/signin-oidc-pages-webapp-client",
+    "response_type": "id_token",
+    "scope": "openid profile",
+    "response_mode": "form_post",
+    "nonce": "636652022383412777.MGNkMDE0M2EtMGYzZC00ZWZlLTgxODgtZmFiMjNlODZmNDhjNWJiNDNkYzUtNGQ2Yi00ODMwLWE4MzEtYzFhY2ZhOTZkMTQ5",
+    "acr_values": "v1=google",
+    "state": "CfDJ8AQSYsh6ho1FqUlbp_GHp0Qyr_HYsCz4ZMzjVuujSLH8BFxOmArwdK0y2KqqqiFfKjTFE3Qt5k-bpCa9VNeRKHDCAU88Ou_XqKWoeAhINHvNMp2QQRNh7J4E1UkO01xklwST9ylj5BNAUJlvz49OQPCnGsjmCrtUf6ZE8jRFIzMTv9a9fc1Q1LdnX4pJrLIsCj_4oasfz2oplzlfolHsvIhW4tCtzZ8Lzh04DVLcXvXIvvhHHQyc9tnzdLvKqvo2tvZGD4Fr-Qwk7MaIS_qFKBAHHK886sO72NUBf6uxxhqt5_ED_BRcSa13HRAKl-B4Y10kHD5IyE2mu9yMPVcNfqCqUOLGJbEEj0EH3zQEk1_NM5ss9ZtgDaWWyTwL-J0dqdTctnr_cfrPLizAl4LyogGo3LOrtBRexPCBfvrCM0OxUIOQDYkTwqmlhFy77YGmCg",
+    "x-client-SKU": "ID_NETSTANDARD1_4",
+    "x-client-ver": "5.2.0.0"
+  }
+}
+2018-06-21 11:24:10.316 -07:00 [DBG] /pcccd+0dblGlzhaFmHMrKcCAlxdHmdXDvNtZuPLRwc= found in database: false
+2018-06-21 11:24:10.316 -07:00 [DBG] user_consent grant with value: PagesWebAppClient.NoUserDatabase|9e4613a3-b838-4c38-8bb2-2894f9bdb7bf not found in store.
+2018-06-21 11:24:10.316 -07:00 [DBG] Found no prior consent from consent store, consent is required
+2018-06-21 11:24:10.324 -07:00 [INF] User consented to scopes: ["openid","profile"]
+2018-06-21 11:24:10.326 -07:00 [DBG] User indicated to remember consent for scopes: ["openid","profile"]
+2018-06-21 11:24:10.332 -07:00 [DBG] Client allows remembering consent, and consent given. Updating consent store for subject: 9e4613a3-b838-4c38-8bb2-2894f9bdb7bf
+2018-06-21 11:24:10.349 -07:00 [DBG] /pcccd+0dblGlzhaFmHMrKcCAlxdHmdXDvNtZuPLRwc= not found in database
+2018-06-21 11:24:10.385 -07:00 [DBG] Creating Implicit Flow response.
+2018-06-21 11:24:10.398 -07:00 [DBG] Getting claims for identity token for subject: 9e4613a3-b838-4c38-8bb2-2894f9bdb7bf and client: PagesWebAppClient.NoUserDatabase
+2018-06-21 11:24:10.622 -07:00 [INF] Authorize endpoint response
+{
+  "SubjectId": "9e4613a3-b838-4c38-8bb2-2894f9bdb7bf",
+  "ClientId": "PagesWebAppClient.NoUserDatabase",
+  "RedirectUri": "https://localhost:44308/signin-oidc-pages-webapp-client",
+  "State": "CfDJ8AQSYsh6ho1FqUlbp_GHp0Qyr_HYsCz4ZMzjVuujSLH8BFxOmArwdK0y2KqqqiFfKjTFE3Qt5k-bpCa9VNeRKHDCAU88Ou_XqKWoeAhINHvNMp2QQRNh7J4E1UkO01xklwST9ylj5BNAUJlvz49OQPCnGsjmCrtUf6ZE8jRFIzMTv9a9fc1Q1LdnX4pJrLIsCj_4oasfz2oplzlfolHsvIhW4tCtzZ8Lzh04DVLcXvXIvvhHHQyc9tnzdLvKqvo2tvZGD4Fr-Qwk7MaIS_qFKBAHHK886sO72NUBf6uxxhqt5_ED_BRcSa13HRAKl-B4Y10kHD5IyE2mu9yMPVcNfqCqUOLGJbEEj0EH3zQEk1_NM5ss9ZtgDaWWyTwL-J0dqdTctnr_cfrPLizAl4LyogGo3LOrtBRexPCBfvrCM0OxUIOQDYkTwqmlhFy77YGmCg",
+  "Scope": "openid profile"
+}
+2018-06-21 11:24:10.635 -07:00 [DBG] Augmenting SignInContext
+2018-06-21 11:24:10.636 -07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2018-06-21 11:24:26.174 -07:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2018-06-21 11:24:26.176 -07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2018-06-21 11:24:26.176 -07:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2018-06-21 11:24:26.289 -07:00 [DBG] Request path /connect/endsession/callback matched to endpoint type Endsession
+2018-06-21 11:24:26.301 -07:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionCallbackEndpoint
+2018-06-21 11:24:26.302 -07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionCallbackEndpoint for /connect/endsession/callback
+2018-06-21 11:24:26.318 -07:00 [DBG] Processing signout callback request
+2018-06-21 11:24:26.349 -07:00 [DBG] PagesWebAppClient.NoUserDatabase found in database: true
+2018-06-21 11:24:26.350 -07:00 [DBG] Client front-channel logout URLs: https://localhost:44308/Identity/Account/SignoutFrontChannel?sid=757f6a09ac0525ab557a6f082356b14a&iss=https%3A%2F%2Flocalhost%3A44305
+2018-06-21 11:24:26.350 -07:00 [DBG] No client back-channel logout URLs
+2018-06-21 11:24:26.350 -07:00 [INF] Successful signout callback.
+2018-06-21 11:24:26.350 -07:00 [DBG] Client front-channel iframe urls: ["https://localhost:44308/Identity/Account/SignoutFrontChannel?sid=757f6a09ac0525ab557a6f082356b14a&iss=https%3A%2F%2Flocalhost%3A44305"]
+2018-06-21 11:24:26.350 -07:00 [DBG] No client back-channel iframe urls
+2018-06-21 11:24:31.836 -07:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2018-06-21 11:24:31.836 -07:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2018-06-21 11:24:31.836 -07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2018-06-21 11:24:31.836 -07:00 [DBG] Start authorize request
+2018-06-21 11:24:31.837 -07:00 [DBG] No user present in authorize request
+2018-06-21 11:24:31.837 -07:00 [DBG] Start authorize request protocol validation
+2018-06-21 11:24:31.839 -07:00 [DBG] PagesWebAppClient.NoUserDatabase found in database: true
+2018-06-21 11:24:31.841 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:24:31.843 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:24:31.845 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:24:31.847 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:24:31.847 -07:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-06-21 11:24:31.847 -07:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "PagesWebAppClient.NoUserDatabase",
+  "ClientName": "PagesWebAppClient.NoUserDatabase Client",
+  "RedirectUri": "https://localhost:44308/signin-oidc-pages-webapp-client",
+  "AllowedRedirectUris": [
+    "https://localhost:44308/signin-oidc-pages-webapp-client"
+  ],
+  "SubjectId": "anonymous",
+  "ResponseType": "id_token",
+  "ResponseMode": "form_post",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile",
+  "State": "CfDJ8AQSYsh6ho1FqUlbp_GHp0QWELeooXdp0UGd76oooV07Oam_AvIjPI7wt9YKoWkMsZxgl69fNpYfp24YGIVLwWGLOPXrFYaSCpUnDt2WCMZlao_dKEQZmJ7p2Sjb6UVhKm0MzySX0TiB1JgS3dvtFLRzIaWIP4_r2Bul6ovFuXOSS8dOJA_DduVqIFe6GDKnoY-EfEfIsyVWkD4PHzbrraQjFuF-002vqboUDzvfLOOYQ4dQl1vUIxunQ8lGc5AJXplkJ1tRLl4wjzuFPYBAYvIKKnlLdJQ3RFDSABK1kIziep6nmfez2nYCcDge3xMcnOysE0S7SH7opwVMzNJdjbu5Cu0MXcBgdDrB_O36s2-vgtZrgvkLu4aL-9dd8hVZA3RP_XbZNjAzFNs3o0sZWksaPg_ea2ueII2BKb_izwTL5MpmkGEiHAb8N6CafwrTsA",
+  "Nonce": "636652022718256879.NThjYjY2YzEtN2RhYS00NGEwLWEwNjgtOTg3NDdjMGU3YmZiOGNlODQ5MjAtMThlOS00MGZmLTg0NjYtZTRhOTY1YTFmN2Iw",
+  "AuthenticationContextReferenceClasses": [
+    "v1=google"
+  ],
+  "Raw": {
+    "client_id": "PagesWebAppClient.NoUserDatabase",
+    "redirect_uri": "https://localhost:44308/signin-oidc-pages-webapp-client",
+    "response_type": "id_token",
+    "scope": "openid profile",
+    "response_mode": "form_post",
+    "nonce": "636652022718256879.NThjYjY2YzEtN2RhYS00NGEwLWEwNjgtOTg3NDdjMGU3YmZiOGNlODQ5MjAtMThlOS00MGZmLTg0NjYtZTRhOTY1YTFmN2Iw",
+    "acr_values": "v1=google",
+    "state": "CfDJ8AQSYsh6ho1FqUlbp_GHp0QWELeooXdp0UGd76oooV07Oam_AvIjPI7wt9YKoWkMsZxgl69fNpYfp24YGIVLwWGLOPXrFYaSCpUnDt2WCMZlao_dKEQZmJ7p2Sjb6UVhKm0MzySX0TiB1JgS3dvtFLRzIaWIP4_r2Bul6ovFuXOSS8dOJA_DduVqIFe6GDKnoY-EfEfIsyVWkD4PHzbrraQjFuF-002vqboUDzvfLOOYQ4dQl1vUIxunQ8lGc5AJXplkJ1tRLl4wjzuFPYBAYvIKKnlLdJQ3RFDSABK1kIziep6nmfez2nYCcDge3xMcnOysE0S7SH7opwVMzNJdjbu5Cu0MXcBgdDrB_O36s2-vgtZrgvkLu4aL-9dd8hVZA3RP_XbZNjAzFNs3o0sZWksaPg_ea2ueII2BKb_izwTL5MpmkGEiHAb8N6CafwrTsA",
+    "x-client-SKU": "ID_NETSTANDARD1_4",
+    "x-client-ver": "5.2.0.0"
+  }
+}
+2018-06-21 11:24:31.847 -07:00 [INF] Showing login: User is not authenticated
+2018-06-21 11:24:31.855 -07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2018-06-21 11:24:33.701 -07:00 [DBG] Augmenting SignInContext
+2018-06-21 11:24:33.701 -07:00 [DBG] Adding idp claim with value: local
+2018-06-21 11:24:33.701 -07:00 [DBG] Adding amr claim with value: pwd
+2018-06-21 11:24:33.701 -07:00 [DBG] Adding auth_time claim with value: 1529605473
+2018-06-21 11:24:33.702 -07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2018-06-21 11:24:33.702 -07:00 [INF] User logged in.
+2018-06-21 11:24:33.711 -07:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2018-06-21 11:24:33.711 -07:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2018-06-21 11:24:33.711 -07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2018-06-21 11:24:33.711 -07:00 [DBG] Start authorize callback request
+2018-06-21 11:24:33.711 -07:00 [DBG] User in authorize request: 9e4613a3-b838-4c38-8bb2-2894f9bdb7bf
+2018-06-21 11:24:33.711 -07:00 [DBG] Start authorize request protocol validation
+2018-06-21 11:24:33.714 -07:00 [DBG] PagesWebAppClient.NoUserDatabase found in database: true
+2018-06-21 11:24:33.715 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:24:33.717 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:24:33.718 -07:00 [DBG] Found ["openid","profile"] identity scopes in database
+2018-06-21 11:24:33.720 -07:00 [DBG] Found [] API scopes in database
+2018-06-21 11:24:33.720 -07:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2018-06-21 11:24:33.720 -07:00 [INF] ValidatedAuthorizeRequest
+{
+  "ClientId": "PagesWebAppClient.NoUserDatabase",
+  "ClientName": "PagesWebAppClient.NoUserDatabase Client",
+  "RedirectUri": "https://localhost:44308/signin-oidc-pages-webapp-client",
+  "AllowedRedirectUris": [
+    "https://localhost:44308/signin-oidc-pages-webapp-client"
+  ],
+  "SubjectId": "9e4613a3-b838-4c38-8bb2-2894f9bdb7bf",
+  "ResponseType": "id_token",
+  "ResponseMode": "form_post",
+  "GrantType": "implicit",
+  "RequestedScopes": "openid profile",
+  "State": "CfDJ8AQSYsh6ho1FqUlbp_GHp0QWELeooXdp0UGd76oooV07Oam_AvIjPI7wt9YKoWkMsZxgl69fNpYfp24YGIVLwWGLOPXrFYaSCpUnDt2WCMZlao_dKEQZmJ7p2Sjb6UVhKm0MzySX0TiB1JgS3dvtFLRzIaWIP4_r2Bul6ovFuXOSS8dOJA_DduVqIFe6GDKnoY-EfEfIsyVWkD4PHzbrraQjFuF-002vqboUDzvfLOOYQ4dQl1vUIxunQ8lGc5AJXplkJ1tRLl4wjzuFPYBAYvIKKnlLdJQ3RFDSABK1kIziep6nmfez2nYCcDge3xMcnOysE0S7SH7opwVMzNJdjbu5Cu0MXcBgdDrB_O36s2-vgtZrgvkLu4aL-9dd8hVZA3RP_XbZNjAzFNs3o0sZWksaPg_ea2ueII2BKb_izwTL5MpmkGEiHAb8N6CafwrTsA",
+  "Nonce": "636652022718256879.NThjYjY2YzEtN2RhYS00NGEwLWEwNjgtOTg3NDdjMGU3YmZiOGNlODQ5MjAtMThlOS00MGZmLTg0NjYtZTRhOTY1YTFmN2Iw",
+  "AuthenticationContextReferenceClasses": [
+    "v1=google"
+  ],
+  "SessionId": "1f1d5995da81a0c2ae3ebe2a2ca27c38",
+  "Raw": {
+    "client_id": "PagesWebAppClient.NoUserDatabase",
+    "redirect_uri": "https://localhost:44308/signin-oidc-pages-webapp-client",
+    "response_type": "id_token",
+    "scope": "openid profile",
+    "response_mode": "form_post",
+    "nonce": "636652022718256879.NThjYjY2YzEtN2RhYS00NGEwLWEwNjgtOTg3NDdjMGU3YmZiOGNlODQ5MjAtMThlOS00MGZmLTg0NjYtZTRhOTY1YTFmN2Iw",
+    "acr_values": "v1=google",
+    "state": "CfDJ8AQSYsh6ho1FqUlbp_GHp0QWELeooXdp0UGd76oooV07Oam_AvIjPI7wt9YKoWkMsZxgl69fNpYfp24YGIVLwWGLOPXrFYaSCpUnDt2WCMZlao_dKEQZmJ7p2Sjb6UVhKm0MzySX0TiB1JgS3dvtFLRzIaWIP4_r2Bul6ovFuXOSS8dOJA_DduVqIFe6GDKnoY-EfEfIsyVWkD4PHzbrraQjFuF-002vqboUDzvfLOOYQ4dQl1vUIxunQ8lGc5AJXplkJ1tRLl4wjzuFPYBAYvIKKnlLdJQ3RFDSABK1kIziep6nmfez2nYCcDge3xMcnOysE0S7SH7opwVMzNJdjbu5Cu0MXcBgdDrB_O36s2-vgtZrgvkLu4aL-9dd8hVZA3RP_XbZNjAzFNs3o0sZWksaPg_ea2ueII2BKb_izwTL5MpmkGEiHAb8N6CafwrTsA",
+    "x-client-SKU": "ID_NETSTANDARD1_4",
+    "x-client-ver": "5.2.0.0"
+  }
+}
+2018-06-21 11:24:33.753 -07:00 [DBG] /pcccd+0dblGlzhaFmHMrKcCAlxdHmdXDvNtZuPLRwc= found in database: true
+2018-06-21 11:24:33.758 -07:00 [DBG] Consent found in consent store is same as current request, consent is not required
+2018-06-21 11:24:33.758 -07:00 [DBG] Creating Implicit Flow response.
+2018-06-21 11:24:33.758 -07:00 [DBG] Getting claims for identity token for subject: 9e4613a3-b838-4c38-8bb2-2894f9bdb7bf and client: PagesWebAppClient.NoUserDatabase
+2018-06-21 11:24:33.828 -07:00 [INF] Authorize endpoint response
+{
+  "SubjectId": "9e4613a3-b838-4c38-8bb2-2894f9bdb7bf",
+  "ClientId": "PagesWebAppClient.NoUserDatabase",
+  "RedirectUri": "https://localhost:44308/signin-oidc-pages-webapp-client",
+  "State": "CfDJ8AQSYsh6ho1FqUlbp_GHp0QWELeooXdp0UGd76oooV07Oam_AvIjPI7wt9YKoWkMsZxgl69fNpYfp24YGIVLwWGLOPXrFYaSCpUnDt2WCMZlao_dKEQZmJ7p2Sjb6UVhKm0MzySX0TiB1JgS3dvtFLRzIaWIP4_r2Bul6ovFuXOSS8dOJA_DduVqIFe6GDKnoY-EfEfIsyVWkD4PHzbrraQjFuF-002vqboUDzvfLOOYQ4dQl1vUIxunQ8lGc5AJXplkJ1tRLl4wjzuFPYBAYvIKKnlLdJQ3RFDSABK1kIziep6nmfez2nYCcDge3xMcnOysE0S7SH7opwVMzNJdjbu5Cu0MXcBgdDrB_O36s2-vgtZrgvkLu4aL-9dd8hVZA3RP_XbZNjAzFNs3o0sZWksaPg_ea2ueII2BKb_izwTL5MpmkGEiHAb8N6CafwrTsA",
+  "Scope": "openid profile"
+}
+2018-06-21 11:24:33.828 -07:00 [DBG] Augmenting SignInContext
+2018-06-21 11:24:33.829 -07:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2018-06-21 11:24:38.221 -07:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2018-06-21 11:24:38.222 -07:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2018-06-21 11:24:38.222 -07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2018-06-21 11:24:38.222 -07:00 [DBG] Start discovery request
+2018-06-21 11:24:38.223 -07:00 [DBG] Found ["openid","profile","api1"] as all scopes in database
+2018-06-21 11:24:38.275 -07:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2018-06-21 11:24:38.276 -07:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2018-06-21 11:24:38.276 -07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2018-06-21 11:24:38.276 -07:00 [DBG] Start key discovery request
+2018-06-21 11:24:38.326 -07:00 [DBG] Request path /connect/endsession matched to endpoint type Endsession
+2018-06-21 11:24:38.326 -07:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionEndpoint
+2018-06-21 11:24:38.326 -07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionEndpoint for /connect/endsession
+2018-06-21 11:24:38.331 -07:00 [DBG] Processing signout request for 9e4613a3-b838-4c38-8bb2-2894f9bdb7bf
+2018-06-21 11:24:38.336 -07:00 [DBG] Start end session request validation
+2018-06-21 11:24:38.343 -07:00 [DBG] Start identity token validation
+2018-06-21 11:24:38.354 -07:00 [DBG] PagesWebAppClient.NoUserDatabase found in database: true
+2018-06-21 11:24:38.354 -07:00 [DBG] Client found: PagesWebAppClient.NoUserDatabase / PagesWebAppClient.NoUserDatabase Client
+2018-06-21 11:24:38.434 -07:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2018-06-21 11:24:38.439 -07:00 [DBG] Token validation success
+{
+  "ClientId": "PagesWebAppClient.NoUserDatabase",
+  "ClientName": "PagesWebAppClient.NoUserDatabase Client",
+  "ValidateLifetime": false,
+  "Claims": {
+    "nbf": 1529605473,
+    "exp": 1529605773,
+    "iss": "https://localhost:44305",
+    "aud": "PagesWebAppClient.NoUserDatabase",
+    "nonce": "636652022718256879.NThjYjY2YzEtN2RhYS00NGEwLWEwNjgtOTg3NDdjMGU3YmZiOGNlODQ5MjAtMThlOS00MGZmLTg0NjYtZTRhOTY1YTFmN2Iw",
+    "iat": 1529605473,
+    "sid": "1f1d5995da81a0c2ae3ebe2a2ca27c38",
+    "sub": "9e4613a3-b838-4c38-8bb2-2894f9bdb7bf",
+    "auth_time": 1529605473,
+    "idp": "local",
+    "preferred_username": "ted@ted.com",
+    "name": "ted@ted.com",
+    "amr": "pwd"
+  }
+}
+2018-06-21 11:24:38.446 -07:00 [INF] End session request validation success
+{
+  "ClientId": "PagesWebAppClient.NoUserDatabase",
+  "ClientName": "PagesWebAppClient.NoUserDatabase Client",
+  "SubjectId": "9e4613a3-b838-4c38-8bb2-2894f9bdb7bf",
+  "PostLogOutUri": "https://localhost:44308/Identity/Account/SignoutCallbackOidc",
+  "Raw": {
+    "id_token_hint": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjVhNjhjNjZhNDE2MjI5NzVlMjg1NDk1MzZlNmJlNWJjIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1Mjk2MDU0NzMsImV4cCI6MTUyOTYwNTc3MywiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMDUiLCJhdWQiOiJQYWdlc1dlYkFwcENsaWVudC5Ob1VzZXJEYXRhYmFzZSIsIm5vbmNlIjoiNjM2NjUyMDIyNzE4MjU2ODc5Lk5UaGpZalkyWXpFdE4yUmhZUzAwTkdFd0xXRXdOamd0T1RnM05EZGpNR1UzWW1aaU9HTmxPRFE1TWpBdE1UaGxPUzAwTUdabUxUZzBOall0WlRSaE9UWTFZVEZtTjJJdyIsImlhdCI6MTUyOTYwNTQ3Mywic2lkIjoiMWYxZDU5OTVkYTgxYTBjMmFlM2ViZTJhMmNhMjdjMzgiLCJzdWIiOiI5ZTQ2MTNhMy1iODM4LTRjMzgtOGJiMi0yODk0ZjliZGI3YmYiLCJhdXRoX3RpbWUiOjE1Mjk2MDU0NzMsImlkcCI6ImxvY2FsIiwicHJlZmVycmVkX3VzZXJuYW1lIjoidGVkQHRlZC5jb20iLCJuYW1lIjoidGVkQHRlZC5jb20iLCJhbXIiOlsicHdkIl19.oTjo0_7rOVw8qu4MiTA9Afie6uUXTeMW8UEB4H-whTVnZk6WvGAm2fSmKN-W9zC_flOm1NlZlTn8dGyH6EVN6PCWwbQMOebriSodcClzfMlHO1Iom7IeMoEc411cimaJtF1aB-ctE_7k6Vagp2a4NEhEyKgQbBwFPZfhdq-tMhU6IwtKsIVqSX1JcaMPHmOnnSG-oxL47i8xa6jJ3zfS13gWVSGdk5qGBDvATzcHac6D8WCMmhX5ww60g_U6-YUCZRajnIYQ6Bw1DsOOdm1hkgyfehOGmdLYiPQsucZ0uXTPTkHTFTErq_iYzVNkXEtGuDQQRm_Tj2VmGiI5chs85A",
+    "post_logout_redirect_uri": "https://localhost:44308/Identity/Account/SignoutCallbackOidc"
+  }
+}
+2018-06-21 11:24:38.448 -07:00 [DBG] Success validating end session request from PagesWebAppClient.NoUserDatabase
+2018-06-21 11:24:38.477 -07:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2018-06-21 11:24:38.477 -07:00 [INF] AuthenticationScheme: Identity.External signed out.
+2018-06-21 11:24:38.477 -07:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2018-06-21 11:24:38.614 -07:00 [DBG] Request path /connect/endsession/callback matched to endpoint type Endsession
+2018-06-21 11:24:38.614 -07:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionCallbackEndpoint
+2018-06-21 11:24:38.614 -07:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionCallbackEndpoint for /connect/endsession/callback
+2018-06-21 11:24:38.614 -07:00 [DBG] Processing signout callback request
+2018-06-21 11:24:38.619 -07:00 [DBG] PagesWebAppClient.NoUserDatabase found in database: true
+2018-06-21 11:24:38.620 -07:00 [DBG] Client front-channel logout URLs: https://localhost:44308/Identity/Account/SignoutFrontChannel?sid=1f1d5995da81a0c2ae3ebe2a2ca27c38&iss=https%3A%2F%2Flocalhost%3A44305
+2018-06-21 11:24:38.620 -07:00 [DBG] No client back-channel logout URLs
+2018-06-21 11:24:38.620 -07:00 [INF] Successful signout callback.
+2018-06-21 11:24:38.620 -07:00 [DBG] Client front-channel iframe urls: ["https://localhost:44308/Identity/Account/SignoutFrontChannel?sid=1f1d5995da81a0c2ae3ebe2a2ca27c38&iss=https%3A%2F%2Flocalhost%3A44305"]
+2018-06-21 11:24:38.620 -07:00 [DBG] No client back-channel iframe urls
