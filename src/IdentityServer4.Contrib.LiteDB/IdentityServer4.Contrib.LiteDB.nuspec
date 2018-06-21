@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>IdentityServer4.Contrib.LiteDB</id>
+	<title>Pingo Variant of Fluent Command Line Parser</title>
+    <version>$version$</version>
+    <authors>ghstahl</authors>
+    <owners>ghstahl</owners>
+    <projectUrl>https://github.com/ghstahl/IdentityServer4.Contrib.LiteDB</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>IdentityServer4 Stores using LiteDB</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright Herb Stahl 2018</copyright>
+    <tags>IdentityServer4 LiteDB</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\IdentityServer4.Contrib.LiteDB.dll" target="netstandard2.0" />
+	  <file src="bin\Release\netstandard2.0\IdentityServer4.Contrib.LiteDB.pdb" target="netstandard2.0" />
+	  <file src="bin\Release\netstandard2.0\IdentityServer4.Contrib.LiteDB.xml" target="netstandard2.0" />
+  </files>
+</package>

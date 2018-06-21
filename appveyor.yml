@@ -32,7 +32,7 @@ configuration: Release
 
 build:
   project: src/IdentityServer4.Contrib.LiteDB.sln
-
+  publish_nuget: true
 
 after_test:
   
