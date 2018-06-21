@@ -3,7 +3,8 @@
 # IdentityServer4.Contrib.LiteDB
 ## Reference
 [IdentityServer4.Contrib.MongoDB](https://github.com/diogodamiani/IdentityServer4.Contrib.MongoDB)  
-This project is about 99% the same as the MongoDB variant.  LiteDB is MongoDB friendly, so not much change for
+This project is about 99% the same as the MongoDB variant.  LiteDB is MongoDB friendly, so it was basically a search and replace "MongoDB" => "LiteDB"  
+
 
 ## Usage  
 [Startup](src/PagesWebApp/Startup.cs)  
