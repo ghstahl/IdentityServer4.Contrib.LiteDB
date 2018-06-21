@@ -1,5 +1,9 @@
 <meta name='keywords' content='IdentityServer4, LiteDB'>
-[![Build status](https://ci.appveyor.com/api/projects/status/04tdsxp1k964qhgv?svg=true)](https://ci.appveyor.com/project/ghstahl/identityserver4-contrib-litedb)
+
+
+[![Build status](https://ci.appveyor.com/api/projects/status/04tdsxp1k964qhgv/branch/master?svg=true)](https://ci.appveyor.com/project/ghstahl/identityserver4-contrib-litedb/branch/master)
+
+
 # IdentityServer4.Contrib.LiteDB
 ## Reference
 [IdentityServer4.Contrib.MongoDB](https://github.com/diogodamiani/IdentityServer4.Contrib.MongoDB)  
