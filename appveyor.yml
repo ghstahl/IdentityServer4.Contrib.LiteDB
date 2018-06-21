@@ -33,8 +33,6 @@ configuration: Release
 build:
   project: src/IdentityServer4.Contrib.LiteDB.sln
 
-test:
-- cmd:dotnet test --test-adapter-path:. --logger:Appveyor
 
 after_test:
   
