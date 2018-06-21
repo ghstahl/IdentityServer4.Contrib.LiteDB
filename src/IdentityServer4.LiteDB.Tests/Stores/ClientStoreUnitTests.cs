@@ -1,42 +1,21 @@
+using System;
 using System.Collections.Generic;
-using FakeItEasy;
-using IdentityServer4.LiteDB.Configuration;
-using IdentityServer4.LiteDB.DbContexts;
+using System.Threading.Tasks;
 using IdentityServer4.LiteDB.Entities;
 using IdentityServer4.LiteDB.Interfaces;
-using IdentityServer4.LiteDB.Stores;
 using IdentityServer4.Models;
 using IdentityServer4.Stores;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Client = IdentityServer4.LiteDB.Entities.Client;
 
 namespace IdentityServer4.LiteDB.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class ClientStoreUnitTests
     {
-        [TestMethod]
-        public void TestMethod1()
+        public Entities.Client GenerateEntityClient()
         {
-            var f = new TempFile();
-
-            var fileName = f.Filename;
-            var settings = A.Fake<IOptions<LiteDBConfiguration>>();
-            A.CallTo(() => settings.Value).Returns(new LiteDBConfiguration()
-            {
-                ConnectionString = f.Filename
-            });
-
-            var serviceProvider = new ServiceCollection()
-                .AddLogging()
-                .AddTransient<IConfigurationDbContext, ConfigurationDbContext>()
-                .AddSingleton(settings)
-                .AddTransient<IClientStore, ClientStore>()
-                .BuildServiceProvider();
-            var configurationDbContext = serviceProvider.GetService<IConfigurationDbContext>();
-            var client = new Client()
+            var client = new Entities.Client()
             {
                 ClientId = "PagesWebAppClient",
                 ClientName = "PagesWebAppClient Client",
@@ -64,14 +43,37 @@ namespace IdentityServer4.LiteDB.Tests
                     new ClientScope(){Scope = IdentityServerConstants.StandardScopes.Profile}
                 }
             };
+            return client;
+        }
 
-            configurationDbContext.AddClient(client);
+        [TestMethod]
+        public async Task Add_Client_Find_Client_Success()
+        {
+            var hostContainer = new HostContainer();
 
-            var clientStore = serviceProvider.GetService<IClientStore>();
+            var configurationDbContext = hostContainer.ServiceProvider.GetService<IConfigurationDbContext>();
 
+            var entityClient = GenerateEntityClient();
+            configurationDbContext.AddClient(entityClient);
 
+            var clientStore = hostContainer.ServiceProvider.GetService<IClientStore>();
+            var idsrvClient = await clientStore.FindClientByIdAsync(entityClient.ClientId);
 
+            Assert.IsNotNull(idsrvClient);
+            Assert.AreEqual(idsrvClient.ClientId, entityClient.ClientId);
 
+        }
+        [TestMethod]
+        public async Task Find_Client_Fail()
+        {
+            var hostContainer = new HostContainer();
+
+            var configurationDbContext = hostContainer.ServiceProvider.GetService<IConfigurationDbContext>();
+
+            var clientStore = hostContainer.ServiceProvider.GetService<IClientStore>();
+            var idsrvClient = await clientStore.FindClientByIdAsync(Guid.NewGuid().ToString());
+
+            Assert.IsNull(idsrvClient);
 
         }
     }

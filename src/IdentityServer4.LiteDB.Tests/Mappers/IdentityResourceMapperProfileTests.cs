@@ -18,19 +18,4 @@ namespace IdentityServer4.LiteDB.Tests.Mappers
             Assert.IsNotNull(model);
         }
     }
-    [TestClass]
-    public class PersistedGrantMapperProfileTests
-    {
-        [TestMethod]
-        public void Map()
-        {
-            var model = new Models.PersistedGrant();
-            var entity = PersistedGrantMappers.ToEntity(model);
-            model = PersistedGrantMappers.ToModel(entity);
-
-            // Assert
-            Assert.IsNotNull(entity);
-            Assert.IsNotNull(model);
-        }
-    }
 }
