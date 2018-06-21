@@ -15,8 +15,9 @@ before_build:
   # Display .NET Core version
   - cmd: dotnet --version
   # Display minimal restore text
-  - cmd: dotnet restore ./src/src.csproj --verbosity m
-  
+  - cmd: dotnet restore ./src/IdentityServer4.Contrib.LiteDB/IdentityServer4.Contrib.LiteDB.csproj --verbosity m
+  - cmd: dotnet restore ./src/IdentityServer4.LiteDB.Tests/IdentityServer4.LiteDB.Tests.csproj --verbosity m
+   
 assembly_info:
   patch: true
   file: AssemblyInfo.*
