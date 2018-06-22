@@ -29,7 +29,7 @@ before_build:
 
 build_script:
     - cmd: dotnet build ./src/IdentityServer4.Contrib.LiteDB.sln -c Release
-    - cmd: dotnet pack  ./src/IdentityServer4.Contrib.LiteDB.sln -c Release /p:PackageVersion={version} 
+    - cmd: dotnet pack  ./src/IdentityServer4.Contrib.LiteDB.sln -c Release /p:PackageVersion==1.0.{build}
 
  
   
