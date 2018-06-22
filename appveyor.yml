@@ -34,16 +34,3 @@ build:
   publish_aspnet_core: true
   verbosity: minimal
 
-  
-artifacts:
-- path: '**\*.nupkg'
-  name: IdentityServer4.Contrib.LiteDB
- 
-deploy:
-  provider: NuGet
-  server:                  # remove to push to NuGet.org
-  api_key:
-    secure: a00q68cpfrfuba65uxtdd07m
-  skip_symbols: false
-  symbol_server:           # remove to push symbols to SymbolSource.org
-  artifact: /.*\.nupkg/
