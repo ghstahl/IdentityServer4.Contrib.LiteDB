@@ -28,9 +28,7 @@ before_build:
   - cmd: dotnet restore ./src/IdentityServer4.Contrib.LiteDB.sln --verbosity m
 
 build:
+  project: ./src/IdentityServer4.Contrib.LiteDB.sln
   publish_nuget: true
-  publish_nuget_symbols: true
-  include_nuget_references: true
-  publish_aspnet_core: true
-  verbosity: minimal
+  verbosity: detailed
 
