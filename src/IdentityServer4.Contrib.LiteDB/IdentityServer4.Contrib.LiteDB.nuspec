@@ -1,23 +1,18 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>IdentityServer4.Contrib.LiteDB</id>
+    <id>$id$</id>
     <version>$version$</version>
-    <title>IdentityServer4 Operation Store implemented with LiteDB</title>
-    <authors>Herb Stahl</authors>
-    <owners>Herb Stahl</owners>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
     <licenseUrl>https://github.com/ghstahl/IdentityServer4.Contrib.LiteDB/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/ghstahl/IdentityServer4.Contrib.LiteDB</projectUrl>
-    <iconUrl></iconUrl>
+    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>IdentityServer4 Operation Store implemented with LiteDB</description>
-    <releaseNotes></releaseNotes>
+    <description>$description$</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>Copyright Herb Stahl 2018</copyright>
     <tags>IdentityServer4 LiteDB</tags>
   </metadata>
-  <files>
-    <file src=".\bin\Release\netstandard2.0\IdentityServer4.Contrib.LiteDB.dll" target="lib\netstandard2.0" />
-    <file src=".\bin\Release\netstandard2.0\IdentityServer4.Contrib.LiteDB.pdb" target="lib\netstandard2.0" />
-    <file src=".\bin\Release\netstandard2.0\IdentityServer4.Contrib.LiteDB.xml" target="lib\netstandard2.0" />
-  </files>
 </package>
