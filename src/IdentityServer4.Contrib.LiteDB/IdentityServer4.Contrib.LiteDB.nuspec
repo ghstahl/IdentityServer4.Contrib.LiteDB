@@ -4,8 +4,8 @@
     <id>IdentityServer4.Contrib.LiteDB</id>
     <version>$version$</version>
     <title>IdentityServer4 Operation Store implemented with LiteDB</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
+    <authors>Herb Stahl</authors>
+    <owners>Herb Stahl</owners>
     <licenseUrl>https://github.com/ghstahl/IdentityServer4.Contrib.LiteDB/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/ghstahl/IdentityServer4.Contrib.LiteDB</projectUrl>
     <iconUrl></iconUrl>
