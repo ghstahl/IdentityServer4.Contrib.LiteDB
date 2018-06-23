@@ -1,34 +1,31 @@
-version: 1.0.{build}
+version: 1.0.0-alpha-{build}
 image: Visual Studio 2017
 configuration: Release
+init:
+    - cmd: git config --global core.autocrlf true
 dotnet_csproj:
-  patch: true
+  patch:  true
   file: '**\*.csproj'
-  version: '{version}'
+  version:  '{version}'
   package_version: '{version}'
   assembly_version: '{version}'
   file_version: '{version}'
   informational_version: '{version}'
-
-branches:
-  only:
-    - master
-init:
-  # Good practise, because Windows line endings are different from Unix/Linux ones
-  - cmd: git config --global core.autocrlf true
-  
 install:
-  # Install repo specific stuff here
-  - appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/v4.0.0/nuget.exe
-
+- cmd: appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/v4.0.0/nuget.exe
+nuget:
+  account_feed: true
+  project_feed: true
 before_build:
-  # Display .NET Core version
-  - cmd: dotnet --version
-  # Display minimal restore text
-  - cmd: dotnet restore ./src/IdentityServer4.Contrib.LiteDB.sln --verbosity m
+- cmd: >-
+    dotnet --version
 
+    dotnet restore ./src/IdentityServer4.Contrib.LiteDB.sln --verbosity m
 build:
   project: ./src/IdentityServer4.Contrib.LiteDB.sln
-  publish_nuget: true
-  verbosity: detailed
-
+  verbosity: minimal
+after_build:
+- cmd: dotnet pack /p:PackageVersion=%appveyor_build_version% ./src/IdentityServer4.Contrib.LiteDB.sln
+artifacts:
+- path: '**\IdentityServer4.*.nupkg'
+  name: IdentityServer4.Contrib.LiteDB
