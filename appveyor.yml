@@ -13,9 +13,7 @@ dotnet_csproj:
   informational_version: '{version}'
 install:
 - cmd: appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/v4.0.0/nuget.exe
-nuget:
-  account_feed: true
-  project_feed: true
+
 before_build:
 - cmd: >-
     dotnet --version
