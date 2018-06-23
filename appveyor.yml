@@ -29,3 +29,8 @@ after_build:
 artifacts:
 - path: '**\IdentityServer4.*.nupkg'
   name: IdentityServer4.Contrib.LiteDB
+  
+  deploy:
+- provider: NuGet
+  api_key:
+    secure: B/f51VFX8VlPydPBC8o0fhaoDnDY/nFwXF8rWtCaGSbjTs3iWh7nY6geUynibgJs
