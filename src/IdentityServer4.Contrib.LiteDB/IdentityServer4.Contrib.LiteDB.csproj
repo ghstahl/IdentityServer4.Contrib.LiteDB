@@ -1,9 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>IdentityServer4.LiteDB</RootNamespace>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageLicenseUrl>https://github.com/ghstahl/IdentityServer4.Contrib.LiteDB/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/ghstahl/IdentityServer4.Contrib.LiteDB</PackageProjectUrl>
+    <Authors>ghstahl</Authors>
+    <Company />
+    <Copyright>Copyright ghstahl 2018</Copyright>
+    <PackageTags>IdentityServer4 LiteDB</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
