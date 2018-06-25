@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IdentityServer4.Contrib.LiteDB\IdentityServer4.Contrib.LiteDB.csproj" />
+    <ProjectReference Include="..\IdentityServer4.OperationalStore.CoreTests\IdentityServer4.OperationalStore.CoreTests.csproj" />
   </ItemGroup>
 
 </Project>

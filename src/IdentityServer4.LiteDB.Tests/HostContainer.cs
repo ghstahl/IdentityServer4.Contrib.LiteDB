@@ -3,6 +3,7 @@ using IdentityServer4.LiteDB.Configuration;
 using IdentityServer4.LiteDB.DbContexts;
 using IdentityServer4.LiteDB.Interfaces;
 using IdentityServer4.LiteDB.Stores;
+using IdentityServer4.OperationalStore.CoreTests;
 using IdentityServer4.Stores;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -10,41 +11,49 @@ using Client = IdentityServer4.LiteDB.Entities.Client;
 
 namespace IdentityServer4.LiteDB.Tests
 {
-    public class HostContainer
+    public static class HostContainer
     {
-        private TempFile TempFile { get; }
+        private static TempFile _tempFile;
+        private static ServiceProvider _serviceProvider;
 
-        public HostContainer()
+        public static ServiceProvider ServiceProvider
         {
-            TempFile = new TempFile();
-            var liteDbConfiguration = new LiteDBConfiguration()
+            get
             {
-                ConnectionString = TempFile.Filename
-            };
-            var settings = A.Fake<IOptions<LiteDBConfiguration>>();
-            A.CallTo(() => settings.Value).Returns(liteDbConfiguration);
+                if (_serviceProvider == null)
+                {
 
-            var serviceCollection = new ServiceCollection()
-                .AddLogging()
-                .AddTransient<IConfigurationDbContext, ConfigurationDbContext>()
-                .AddSingleton(settings);
+                    _tempFile = new TempFile();
+                    var liteDbConfiguration = new LiteDBConfiguration()
+                    {
+                        ConnectionString = _tempFile.Filename
+                    };
+                    var settings = A.Fake<IOptions<LiteDBConfiguration>>();
+                    A.CallTo(() => settings.Value).Returns(liteDbConfiguration);
 
-            var identityServerBuilder = serviceCollection.AddIdentityServer();
-           
+                    var serviceCollection = new ServiceCollection()
+                        .AddLogging()
+                        .AddTransient<IConfigurationDbContext, ConfigurationDbContext>()
+                        .AddSingleton(settings);
 
-            identityServerBuilder.AddConfigurationStore(setupAction =>
-            {
-                setupAction.ConnectionString = liteDbConfiguration.ConnectionString;
-            });
+                    var identityServerBuilder = serviceCollection.AddIdentityServer();
 
-            identityServerBuilder.AddOperationalStore(setupAction =>
-            {
-                setupAction.ConnectionString = liteDbConfiguration.ConnectionString;
-            });
 
-            ServiceProvider = serviceCollection.BuildServiceProvider();
+                    identityServerBuilder.AddConfigurationStore(setupAction =>
+                    {
+                        setupAction.ConnectionString = liteDbConfiguration.ConnectionString;
+                    });
+
+                    identityServerBuilder.AddOperationalStore(setupAction =>
+                    {
+                        setupAction.ConnectionString = liteDbConfiguration.ConnectionString;
+                    });
+                    serviceCollection.AddSingleton<IOperationalTestContext,OperationalTestContext>();
+                    _serviceProvider = serviceCollection.BuildServiceProvider();
+                }
+
+                return _serviceProvider;
+            }
         }
-
-        public ServiceProvider ServiceProvider { get; }
     }
 }
