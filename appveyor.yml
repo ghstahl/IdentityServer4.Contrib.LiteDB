@@ -22,11 +22,7 @@ before_build:
 build:
   project: ./src/IdentityServer4.Contrib.LiteDB.sln
   verbosity: minimal
-after_build:
-- cmd: dotnet pack /p:PackageVersion=%appveyor_build_version% ./src/IdentityServer4.Contrib.LiteDB.sln
-artifacts:
-- path: '**\IdentityServer4.*.nupkg'
-  name: IdentityServer4.Contrib.LiteDB
+  publish_nuget: true
   
 #deploy:
 #- provider: NuGet
