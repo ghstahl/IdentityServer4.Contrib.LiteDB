@@ -10,6 +10,7 @@
     <Company />
     <Copyright>Copyright ghstahl 2018</Copyright>
     <PackageTags>IdentityServer4 LiteDB</PackageTags>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
