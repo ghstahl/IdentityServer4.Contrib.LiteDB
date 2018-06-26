@@ -1,4 +1,4 @@
-version: 1.0.{build}-nightly
+version: 1.0.0-nightly-{build}
 image: Visual Studio 2017
 configuration: Release
 init:
